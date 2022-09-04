@@ -18,7 +18,7 @@ const SButton = styled.button<IButton>`
   border-radius: 4px;
   border: ${props => props.variant === 'outlined' ? '2px solid #005faf' : 'none'};
   color: ${props => props.variant === 'solid' ? '#ffffff' : '#001c3a'};
-  background-color: ${props => props.color ? props.color : '#005faf'};
+  background-color: ${props => props.color && props.variant === 'solid' ? props.color : props.variant !== 'none' && '#005faf'};
   box-shadow: ${props => props.variant === 'solid' &&
           '0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12)'};
   transition: 0.5s;
