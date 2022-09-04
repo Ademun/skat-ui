@@ -1,14 +1,10 @@
-import React, {FC, ReactNode} from "react";
+import React, {FC} from "react";
 import {HeaderStyled} from "./Header.styled";
+import {IComponent} from "../../index";
 
-export interface IHeader {
-    children: ReactNode
-    color?: string;
-}
-
-const Header: FC<IHeader> = ({children, color = '#d4e3ff'}) => {
+const Header: FC<IComponent> = ({children, color = '#d4e3ff', sx}) => {
     return (
-        <HeaderStyled color={color}>{children}</HeaderStyled>
+        <HeaderStyled color={color} sx={sx}>{children}</HeaderStyled>
     )
 }
 export default Header

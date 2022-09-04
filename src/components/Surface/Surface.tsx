@@ -1,11 +1,9 @@
 import {SurfaceStyled} from "./Surface.styled";
-import React, {FC, ReactNode} from 'react';
+import React, {FC} from 'react';
+import {IComponent} from "../../index";
 
-export interface ISurface {
-    children: ReactNode
-    color?: string;
+export interface ISurface extends IComponent{
     isShown?: boolean;
-    sx?: string;
 }
 
 

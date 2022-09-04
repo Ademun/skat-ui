@@ -11,7 +11,7 @@ export const ButtonStyled = styled.button<IButton>`
   border: ${props => props.variant === 'outlined' ? '2px solid #005faf' : 'none'};
   background-color: ${props => props.variant === 'solid' && props.color};
   box-shadow: ${props => props.variant === 'solid' &&
-          '0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12)'};
+          '0 1px 5px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12)'};
   transition: 0.5s;
 
   &:hover {

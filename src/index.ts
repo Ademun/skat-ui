@@ -1,4 +1,15 @@
 import Button from "./components/Button/Button";
+import Header from "./components/Header/Header";
 import Input from "./components/Input/Input";
+import Loader from "./components/Loader/Loader";
+import Navbar from "./components/Navbar/Navbar";
+import Surface from "./components/Surface/Surface";
+import {ReactNode} from "react";
 
-export {Button, Input}
+export interface IComponent {
+    children: ReactNode
+    color?: string;
+    sx?: string
+}
+
+export {Button, Header, Input, Loader, Navbar, Surface}

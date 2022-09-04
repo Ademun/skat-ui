@@ -1,14 +1,12 @@
-import React, {ReactNode, FC} from 'react';
+import React, {FC} from 'react';
 import {ButtonStyled} from './Button.styled';
+import {IComponent} from "../../index";
 
 
-export interface IButton {
-    children: ReactNode;
+export interface IButton extends IComponent {
     variant: 'solid' | 'outlined' | 'none';
     onClick?: () => void;
     disabled?: boolean;
-    color?: string;
-    sx?: string;
 }
 
 const Button: FC<IButton> = ({

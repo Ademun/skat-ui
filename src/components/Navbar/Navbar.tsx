@@ -1,13 +1,9 @@
-import React, {FC, ReactNode} from 'react';
+import React, {FC} from 'react';
 import {NavbarStyled} from "./Navbar.styled";
+import {IComponent} from "../../index";
 
-export interface INavbar {
-    children: ReactNode;
-    color?: string;
-    sx?: string
-}
 
-const Navbar: FC<INavbar> = ({ children, color= '#e0e2ec', sx}) => {
+const Navbar: FC<IComponent> = ({ children, color= '#e0e2ec', sx}) => {
     return (
         <NavbarStyled color={color} sx={sx}>
             {children}

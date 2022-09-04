@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import {ILoader} from "./Loader";
+import {IComponent} from "../../index";
 
-export const LoaderStyled = styled.div<ILoader>`
+export const LoaderStyled = styled.div<IComponent>`
     display: inline-block;
     position: relative;
     width: 80px;
@@ -59,4 +59,6 @@ export const LoaderStyled = styled.div<ILoader>`
         transform: translate(24px, 0);
       }
     }
+  
+  ${props => props.sx}
   `;

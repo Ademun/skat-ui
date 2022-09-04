@@ -1,7 +1,8 @@
 import {InputStyled} from "./Input.styled";
 import React, {FC} from 'react';
+import {IComponent} from "../../index";
 
-export interface IInput {
+export interface IInput extends IComponent{
     placeholder: string;
     onChange?: () => void;
     sx?: string;

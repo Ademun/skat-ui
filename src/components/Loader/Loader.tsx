@@ -1,11 +1,8 @@
 import {LoaderStyled} from "./Loader.styled";
 import React, { FC } from 'react';
+import {IComponent} from "../../index";
 
-export interface ILoader {
-  color?: string;
-}
-
-const Loader: FC<ILoader> = ({ color = '#005faf' }) => {
+const Loader: FC<IComponent> = ({ color = '#005faf' }) => {
 
   return (
     <LoaderStyled color={color} >
