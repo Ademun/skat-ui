@@ -4,6 +4,7 @@ import React, {FC} from 'react';
 interface IInput {
     placeholder: string;
     color?: string;
+    onChange?: () => void;
     sx?: string;
 }
 
@@ -22,9 +23,9 @@ const SInput = styled.input<IInput>`
   ${props => props.sx};
 `;
 
-const Input: FC<IInput> = ({placeholder, ...props}) => {
+const Input: FC<IInput> = ({placeholder, onChange, ...props}) => {
 
-    return <SInput placeholder={placeholder} {...props} />;
+    return <SInput placeholder={placeholder} onChange={onChange} {...props} />;
 };
 
 export default Input;

@@ -5,6 +5,7 @@ interface IButton {
     color?: string;
     variant: 'solid' | 'outlined' | 'none';
     children: ReactNode;
+    onClick?: () => void;
     disabled?: boolean;
     sx?: string;
 }
@@ -31,12 +32,12 @@ const SButton = styled.button<IButton>`
 
 const Button: FC<IButton> = ({
                                  children,
-                                 disabled,
+                                 onClick,
                                  ...props
                              }) => {
 
     return (
-        <SButton disabled={disabled} {...props}>
+        <SButton onClick={onClick} {...props}>
             {children}
         </SButton>
     );
