@@ -2,10 +2,9 @@ import {InputStyled} from "./Input.styled";
 import React, {FC} from 'react';
 import {IComponent} from "../../index";
 
-export interface IInput extends IComponent{
+export interface IInput extends Omit<IComponent, 'children'>{
     placeholder: string;
-    onChange?: () => void;
-    sx?: string;
+    onChange(): void;
 }
 
 

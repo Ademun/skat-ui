@@ -5,8 +5,8 @@ import {IComponent} from "../../index";
 
 export interface IButton extends IComponent {
     variant: 'solid' | 'outlined' | 'none';
-    onClick?: () => void;
     disabled?: boolean;
+    onClick(): void;
 }
 
 const Button: FC<IButton> = ({
