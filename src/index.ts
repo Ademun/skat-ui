@@ -4,8 +4,13 @@ import Input from "./components/Input/Input";
 import Loader from "./components/Loader/Loader";
 import Navbar from "./components/Navbar/Navbar";
 import Surface from "./components/Surface/Surface";
-import Link from "./components/Link/Link";
 import {ReactNode} from "react";
+import {ButtonStyled} from "./components/Button/Button.styled";
+import {HeaderStyled} from "./components/Header/Header.styled";
+import {InputStyled} from "./components/Input/Input.styled";
+import {LoaderStyled} from "./components/Loader/Loader.styled";
+import {NavbarStyled} from "./components/Navbar/Navbar.styled";
+import {SurfaceStyled} from "./components/Surface/Surface.styled";
 
 export interface IComponent {
     children: ReactNode
@@ -13,4 +18,4 @@ export interface IComponent {
     sx?: string
 }
 
-export {Button, Header, Input, Loader, Navbar, Surface, Link}
+export {Button, ButtonStyled, Header, HeaderStyled, Input, InputStyled, Loader, LoaderStyled, Navbar, NavbarStyled, Surface, SurfaceStyled}
